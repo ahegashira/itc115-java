@@ -13,3 +13,5 @@ public static String repl(String word, int times) {
     }
     return answer;
 }
+
+repl("TestPassed", 3);  //expected output: "TestPassedTestPassedTestPassed" 
