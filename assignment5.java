@@ -1,3 +1,10 @@
+/* 
+This program takes two integers representing the month and day in a date and returns the season of that date.
+i.e. season(6, 15); will return "Spring"
+
+By Hiro Egashira on 10/26/2019
+*/
+
 public static String season(int month, int day) {
     String currentSeason = "";
     if ((month == 12 && day > 15) || (month == 1 || month == 2) || (month == 3 && day < 16)) {
@@ -17,3 +24,6 @@ public static String season(int month, int day) {
     }   
     return currentSeason;
 }
+
+season(6, 15);    //should return "Spring"
+season(9, 16);    //should return "Fall"
