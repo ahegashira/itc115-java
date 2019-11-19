@@ -1,3 +1,12 @@
+// From Building Java Programs 4th Edition
+// Chapter 7, Exercise 11
+// Solution by Hiro Egashira on 11/17/2019
+
+
+// Write a method named isUnique that takes an array of integers as a parameter and that returns a boolean
+// value indicating whether or not the values in the array are unique (true for yes, false for no). The values 
+// in the list are considered unique if there is no pair of values that are equal.
+
 package chapter7;
 
 import java.util.Arrays;
