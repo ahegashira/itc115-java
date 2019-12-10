@@ -27,6 +27,9 @@ public class LibraryMain {
 		isbn1 = b1.getIsbn();
 		System.out.print(m1.toString());
 
+		System.out.println("Book 1 is reserved: " + b1.reserved());
+		System.out.println("CD 1 is checked in: " + m1.checkedIn());
+		System.out.println("Book 1 publisher is: " + b1.getPublisher());
 		
 	}
 
