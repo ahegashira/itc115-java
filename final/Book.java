@@ -1,12 +1,14 @@
 package library;
 
 import java.text.NumberFormat;
+import java.time.LocalDate;
 
 public class Book implements Item {
 	public String title;
 	public String authName;
 	public String publisher;
 	public int isbn;
+	public LocalDate dueDate = LocalDate.now();
 	public double lateFine = 0.50;
 	
 	public Book(String title, String authName, String publisher, int isbn) {
@@ -27,6 +29,7 @@ public class Book implements Item {
 				"\nBy: " + authName +
 				"\nPublisher: " + publisher +
 				"\nISBN: " + isbn + 
+				"\nDue 10 days from: " + dueDate +
 				"\nIf this item is returned late, the fee is " + getPriceFormatted(lateFine) + " per day." + 
 				"\n\n\n";
 	}
@@ -85,5 +88,29 @@ public class Book implements Item {
 	public int isbn() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public boolean reserved() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean checkedIn() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public double finesAccrued() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public LocalDate dueDate() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
